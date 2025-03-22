@@ -1,0 +1,39 @@
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.features .box-container .box {
+    padding: 2rem 1.5rem; 
+    background: var(--color-white);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    
+}
+
+.features .box-container .box:hover {
+    outline: var(--outline-hover);
+    outline-offset: 0;
+}
+
+
+.features .box-container .box img {
+    margin: 1rem 0;
+    height: 12rem; /* Réduire la hauteur de l'image */
+}
+
+.features .box-container .box h3 {
+    font-size: 2rem; /* Réduire la taille de la police du titre */
+    line-height: 1.5;
+    color: var(--black);
+}
+
+.features .box-container .box p {
+    font-size: 1.3rem; /* Réduire la taille de la police du paragraphe */
+    line-height: 1.5;
+    color: var(--light-color);
+    padding: 1rem 0; /* Réduire le padding */
+}

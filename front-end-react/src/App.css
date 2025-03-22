@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@600&family=Poppins:wght@100;300;400;500;600&family=Roboto+Slab:wght@200;500&family=Roboto:wght@300&display=swap');
+
+:root {
+  --color-bg: #388E3C;           /* Vert profond pour les en-têtes et boutons (évoke la nature) */
+  --color-hover: #4CAF50;        /* Vert vif pour les effets de survol (fraîcheur) */
+  --black: #2C3E50;              /* Bleu-gris foncé pour le texte (professionnel et lisible) */
+  --light-color: #7F8C8D;        /* Gris doux pour les textes secondaires (léger et moderne) */
+  --bg: #F5F5F5;                 /* Gris très clair pour le fond (neutre et épuré) */
+  --color-white: #FFFFFF;        /* Blanc pur pour les contrastes */
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1); /* Ombre légère */
+  --border: .2rem solid rgba(0, 0, 0, .1);        /* Bordure subtile */
+  --outline: .1rem solid rgba(0, 0, 0, .1);       /* Contour léger */
+  --outline-hover: .2rem solid var(--color-bg);    /* Contour au survol */
+}
+
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html::-webkit-scrollbar {
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--color-bg);
+  border-radius: 5rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: .5rem;
+  background: var(--color-bg);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--color-hover);
+  color: #fff;
+}
+
+body {
+  background: #eee;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+

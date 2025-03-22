@@ -1,0 +1,150 @@
+.products .product-slider {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.products .product-slider:first-child {
+    margin-bottom: 2rem;
+}
+
+.products .product-slider .box {
+    width: 230px; /* Réduction de la largeur des cartes */
+    padding: 1.5rem; /* Moins d'espace intérieur */
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+    background: var(--color-white);
+    outline-offset: -0.5rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+    position: relative;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .products .product-slider .box {
+        width: calc(50% - 1rem); /* Deux cartes par ligne sur les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    .products .product-slider .box {
+        width: 100%; /* Une carte par ligne sur les très petits écrans */
+    }
+}
+
+.products .product-slider .box img {
+    height: 10rem; /* Réduction de la hauteur de l’image */
+    width: 100%; /* Ajustement pour remplir la box */
+    object-fit: cover;
+}
+
+.products .product-slider .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: .5rem .8rem;
+    font-size: 1rem; /* Réduction de la taille du texte promo */
+}
+
+.products .product-slider .box .icons {
+    position: absolute;
+    top: .5rem;
+    right: -6rem;
+}
+
+.products .product-slider .box .icons a {
+    display: block;
+    height: 3.5rem; /* Icône plus petite */
+    width: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    background: rgba(0, 0, 0, .05);
+    border-radius: 50%;
+    margin-top: .7rem;
+}
+
+.products .product-slider .box:hover .icons {
+    right: 1rem;
+}
+
+.products .product-slider .box .icons a:hover {
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+.products .product-slider .box:hover {
+    outline-offset: 0rem;
+    outline: var(--outline-hover);
+}
+
+.products .product-slider .box h3 {
+    font-size: 1.5rem; /* Texte plus petit */
+    color: var(--black);
+}
+
+.products .product-slider .box .stars i {
+    padding: 1rem .1rem;
+    font-size: 1.5rem; /* Icônes étoiles plus petites */
+    color: gold;
+}
+
+.products .product-slider .box .price {
+    font-size: 1.4rem; /* Prix plus petit */
+    color: #333;
+    padding: .5rem 0;
+}
+
+.products .product-slider .box .price span {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.products .product-slider .box .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.products .product-slider .box .quantity span {
+    padding: 0 .5rem;
+    font-size: 1.2rem; /* Réduction de la taille de la quantité */
+}
+
+.products .product-slider .box .quantity input {
+    border: .1rem solid rgba(0, 0, 0, .3);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--black);
+    padding: .5rem;
+    background: rgba(0, 0, 0, .05);
+    width: 50px;
+}
+
+.products .product-slider .box .a {
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.3rem; /* Bouton plus compact */
+    padding: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-radius: .3rem;
+}
+
+.products .product-slider .box .a:hover {
+    background: var(--color-hover);
+}

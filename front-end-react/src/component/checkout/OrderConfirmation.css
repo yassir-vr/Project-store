@@ -1,0 +1,61 @@
+/* OrderConfirmation.css */
+
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+  }
+  
+  .confirmation-container h2 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px; /* Ajoute un espace entre les boutons */
+  }
+  
+  .btn-download {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-download:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-download:active {
+    background-color: #003d7a;
+  }
+  
+  .btn-home {
+    padding: 12px 30px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-home:hover {
+    background-color: #7d0f0f;
+  }
+  

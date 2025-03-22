@@ -1,0 +1,438 @@
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: var(--color-bg);
+    color: var(--color-white);
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: var(--color-bg);
+    margin-right: 1rem;
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: .3rem;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background: var(--color-bg);
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* search form */
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 4.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--color-bg);
+}
+
+/* Ajoute max-height et overflow-y pour rendre le panier scrollable */
+.header .shopping-cart {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: var(--color-white);
+    max-height: 50vh; /* Limiter la hauteur à 50% de la fenêtre */
+    overflow-y: auto; /* Ajouter un scroll vertical si le contenu dépasse */
+}
+
+.header .shopping-cart.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box img {
+    height: 5rem;
+}
+
+.header .shopping-cart .box .fa-trash {
+    font-size: 2rem;
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--ight-color);
+    transform: translate(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover {
+    color: red;
+}
+
+.header .shopping-cart .box .content h3 {
+    color: var(--black);
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.header .shopping-cart .box .content span {
+    color: var(--ight-color);
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.header .shopping-cart .total {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+
+.header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/* login form */
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 35rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: var(--color-white);
+
+}
+
+.header .login-form .form-p {
+    padding: 2rem;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3 {
+    height: 90px;
+    background: var(--color-bg);
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header .form-p .row {
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.header .form-p .row input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.header .form-p .row input:focus {
+    border-color: #ff7800;
+    box-shadow: inset 0px 0px 2px 2px rgb(255, 211, 128);
+}
+
+.header .form-p .row input::placeholder {
+    color: #999;
+}
+
+.header .form-p .row i {
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background: var(--color-bg);
+    border: 1px solid #ff7800;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .form-p .pass {
+    margin: 8px 0 20px 0;
+}
+
+.header .form-p .pass a {
+    color: var(--color-bg);
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.header .form-p .pass a:hover {
+    text-decoration: underline;
+}
+
+.header .form-p .button input {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    background: var(--color-bg);
+    border: 1px solid #ff7800;
+    cursor: pointer;
+}
+
+.header .form-p .button input:hover {
+    background: var(--color-hover);
+    border: 1px solid #3bb77e;
+}
+
+.header .form-p .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.header .form-p .signup-link a {
+    color: var(--color-bg);
+    text-decoration: none;
+}
+
+.header .form-p .signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* media queries */
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .search-form {
+        width: 90%;
+    }
+
+    .header .login-form {
+        width: 90%;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Assure-toi que la classe .icons est définie pour un alignement horizontal */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ajuste l'espacement entre les icônes */
+  }
+  
+  /* Optionnel : Si les icônes sont trop petites ou mal alignées, ajuste leur taille */
+  .icons i {
+    font-size: 24px; /* Ajuste la taille de l'icône si nécessaire */
+    cursor: pointer; /* Ajoute un curseur pointer pour l'interaction */
+  }
+  
+  /* Style pour l'icône de profil */
+  .user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+
+
+/* Styles pour le menu utilisateur */
+.header .user-menu {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    max-height: 50vh; /* Limiter la hauteur à 50% de la fenêtre */
+    overflow-y: auto; /* Ajouter un scroll vertical si le contenu dépasse */
+    transition: right 0.4s linear; /* Animation pour l'affichage */
+}
+
+.header .user-menu.active {
+    right: 2rem; /* Afficher le menu à droite */
+}
+
+/* Contenu du menu utilisateur */
+.header .user-menu .user-content {
+    text-align: center;
+}
+
+.header .user-menu .user-content p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+/* Conteneur des boutons */
+.header .user-menu .buttons-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour les boutons */
+.header .user-menu .buttons-container button {
+    width: 40%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Bouton Profil */
+.header .user-menu .buttons-container .profil-btn {
+    background-color: var(--color-bg);
+}
+
+.header .user-menu .buttons-container .profil-btn:hover {
+    background-color: var(--color-hover);
+}
+
+/* Bouton Logout */
+.header .user-menu .buttons-container .logout-btn {
+    background-color: red;
+}
+
+.header .user-menu .buttons-container .logout-btn:hover {
+    background-color: darkred;
+}
+
+/* Message pour les utilisateurs non connectés */
+.header .user-menu p {
+    font-size: 1.6rem;
+    color: var(--black);
+    text-align: center;
+}
+  

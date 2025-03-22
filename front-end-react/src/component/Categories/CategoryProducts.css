@@ -1,0 +1,294 @@
+.category-products {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Conteneur principal */
+.main-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Section des filtres à gauche */
+.filters-section {
+  width: 250px; /* Largeur fixe pour les filtres */
+  position: sticky;
+  top: 170px; /* Fixe la section en haut lors du défilement */
+  height: fit-content;
+  margin-left: 20px;
+  align-self: flex-start; /* Pour éviter que la section ne prenne toute la hauteur */
+}
+
+/* Barre de recherche */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar .search-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Filtre par prix */
+.price-filter {
+  margin-bottom: 20px;
+}
+
+.price-filter h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price-filter input[type="range"] {
+  width: 100%;
+}
+
+.price-filter p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Section des produits à droite */
+.products-section {
+  flex: 1; /* Prend tout l'espace restant */
+  margin-left: 70px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: 230px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  background: var(--color-white);
+  outline-offset: -0.5rem;
+  outline: var(--outline);
+  box-shadow: var(--box-shadow);
+  transition: 0.2s linear;
+  position: relative;
+}
+
+.product-card img {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-info .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-bg);
+  color: var(--color-white);
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+}
+
+.product-info .icons {
+  position: absolute;
+  top: 0.5rem;
+  right: -6rem;
+}
+
+.product-info .icons a {
+  display: block;
+  height: 3.5rem;
+  width: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 1.5rem;
+  color: var(--black);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  margin-top: 0.7rem;
+}
+
+.product-info .icons a:hover {
+  background: var(--color-bg);
+  color: var(--color-white);
+}
+
+.product-card:hover .icons {
+  right: 1rem;
+}
+
+.product-card:hover {
+  outline-offset: 0rem;
+  outline: var(--outline-hover);
+}
+
+.product-info h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.product-info .pric {
+  font-size: 1.4rem;
+  color: #333;
+  padding: 0.5rem 0;
+}
+
+.product-info .price span {
+  font-size: 1.2rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product-info .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-left: 10px;
+}
+
+.product-info .quantity span {
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-info .quantity input {
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--black);
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  width: 50px;
+}
+
+.product-info .a {
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  background: var(--color-bg);
+  color: var(--color-white);
+  border-radius: 0.3rem;
+}
+
+.product-info .a:hover {
+  background: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
+
+/* Personnalisation du pop-up Swal */
+.large-swal-popup {
+  width: 40vw !important;
+  height: auto !important;
+  max-width: 600px !important;
+  max-height: 500px !important;
+  padding: 15px !important;
+}
+
+.large-swal-title {
+  font-size: 24px !important;
+  text-align: center;
+}
+
+.large-swal-html {
+  font-size: 14px !important;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.similar-products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.similar-product {
+  text-align: center;
+  width: 30%;
+  position: relative;
+}
+
+.similar-product-image {
+  position: relative;
+}
+
+.similar-product img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  display: none;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  color: var(--black);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.similar-product:hover .eye-icon {
+  display: block;
+}
+
+.similar-product h5 {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.similar-product p {
+  font-size: 12px;
+  color: gray;
+}
+
+.eye-icon:hover {
+  background: var(--color-bg);
+  color: var(--color-white);
+}
